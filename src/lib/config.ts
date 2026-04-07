@@ -37,7 +37,6 @@ export const SITE = {
     { slug: "single-item", title: "Single Item Delivery", icon: "FiPackage", image: "/images/services/single-item.jpg" },
     { slug: "office-removals", title: "Office Removals", icon: "FiBriefcase", image: "/images/services/office-removals.jpg" },
     { slug: "packing-service", title: "Packing Service", icon: "FiBox", image: "/images/services/packing.jpg" },
-    { slug: "furniture-disposal", title: "Furniture Disposal", icon: "FiTrash2", image: "/images/services/disposal.jpg" },
     { slug: "man-and-van", title: "Man and Van", icon: "FiTruck", image: "/images/services/man-and-van.jpg" },
   ],
   social: { facebook: "", instagram: "" }, // TODO: Add social media URLs

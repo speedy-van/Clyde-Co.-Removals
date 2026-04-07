@@ -74,19 +74,6 @@ export const serviceContent: Record<string, ServiceContent> = {
     process: `You choose the level of service you need—full house packing, fragile items only, or specific rooms. We arrive the day before or morning of your move with all materials. Your belongings are packed efficiently and loaded ready for transport. At your new home, we can unpack and remove all packing materials if required.`,
     pricing: `Packing service pricing depends on the extent of service and volume of items. We include all boxes, tape, bubble wrap, and tissue paper in our quotes.`,
   },
-  "furniture-disposal": {
-    intro: `When you're moving or decluttering, unwanted furniture can become a real headache. Our furniture disposal service provides responsible removal and disposal of items you no longer need. We'll collect sofas, beds, wardrobes, and appliances—recycling and donating where possible to minimise landfill waste. It's an environmentally conscious way to clear space.`,
-    features: [
-      "Collection of unwanted furniture and appliances",
-      "Responsible disposal with recycling prioritised",
-      "Donation to local charities where appropriate",
-      "Single item or full house clearance",
-      "Same-day service often available",
-      "Licensed waste carrier documentation",
-    ],
-    process: `Tell us what needs collecting and where it is. We'll provide a quote based on volume and access. Our team collects the items, loads them carefully to avoid damage to your property, and ensures they're disposed of responsibly. You'll receive confirmation that items have been handled in accordance with waste regulations.`,
-    pricing: `Disposal pricing is based on volume and type of items. We charge fairly and transparently, with no nasty surprises once we arrive.`,
-  },
   "man-and-van": {
     intro: `Our man and van service offers the flexibility of professional help without the scale of a full house move. Whether you're collecting purchases, moving a few items between properties, or clearing a room, we provide reliable assistance with a capable vehicle and an experienced pair of hands. It's the practical solution for smaller jobs that still need doing right.`,
     features: [

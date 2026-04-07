@@ -9,7 +9,7 @@ export type HeroProps = Record<string, never>;
 
 export function Hero() {
   return (
-    <Box as="section" position="relative" minH="85vh" overflow="hidden">
+    <Box as="section" position="relative" minH="85vh" overflow="hidden" bg="clydeNavy">
       {/* Background Image with Overlay */}
       <Box position="absolute" inset={0} zIndex={0}>
         <Image
@@ -24,7 +24,7 @@ export function Hero() {
         <Box
           position="absolute"
           inset={0}
-          bgGradient="linear(to-b, blackAlpha.700, blackAlpha.600)"
+          bgGradient="linear(to-b, blackAlpha.800, blackAlpha.700)"
         />
       </Box>
 
@@ -60,6 +60,7 @@ export function Hero() {
             color="white"
             lineHeight="1.1"
             mb={6}
+            textShadow="0 2px 8px rgba(0,0,0,0.5)"
           >
             South Lanarkshire&apos;s Trusted Furniture Removals
           </Heading>
