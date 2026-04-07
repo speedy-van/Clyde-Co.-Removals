@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Flex, Heading, Text, Stack } from "@chakra-ui/react";
+import Image from "next/image";
 import { PhoneButton, WhatsAppButton, TrustBadges } from "@/components/shared";
 import { SITE } from "@/lib/config";
 
@@ -9,13 +10,21 @@ export type HeroProps = Record<string, never>;
 export function Hero() {
   return (
     <Box as="section" position="relative" minH="85vh" overflow="hidden" bg="clydeNavy">
-      {/* Background Overlay - replace with actual image when available */}
-      <Box
-        position="absolute"
-        inset={0}
-        zIndex={0}
-        bgGradient="linear(to-b, blackAlpha.600, blackAlpha.800)"
-      />
+      {/* Background Image with Overlay */}
+      <Box position="absolute" inset={0} zIndex={0}>
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Professional furniture removal van in South Lanarkshire"
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+        />
+        <Box
+          position="absolute"
+          inset={0}
+          bgGradient="linear(to-b, blackAlpha.700, blackAlpha.600)"
+        />
+      </Box>
 
       {/* Content */}
       <Flex

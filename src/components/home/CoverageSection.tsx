@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Box, Text, Wrap, Tag } from "@chakra-ui/react";
 import { Container, SectionHeading, MotionSection } from "@/components/shared";
 import { SITE } from "@/lib/config";
@@ -11,8 +12,16 @@ export type CoverageSectionProps = Record<string, never>;
 export function CoverageSection() {
   return (
     <Box as="section" position="relative" py={{ base: 16, md: 24 }} overflow="hidden">
-      {/* Background - replace with actual image when available */}
-      <Box position="absolute" inset={0} zIndex={0} bg="neutralLight" />
+      {/* Background Image */}
+      <Box position="absolute" inset={0} zIndex={0}>
+        <Image
+          src="/images/coverage-scotland.jpg"
+          alt="South Lanarkshire countryside landscape"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <Box position="absolute" inset={0} bg="neutralLight" opacity={0.92} />
+      </Box>
 
       <Box position="relative" zIndex={1}>
         <Container>
