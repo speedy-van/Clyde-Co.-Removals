@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Flex, Heading, Text, Stack } from "@chakra-ui/react";
-import Image from "next/image";
 import { PhoneButton, WhatsAppButton, TrustBadges } from "@/components/shared";
 import { SITE } from "@/lib/config";
 
@@ -10,23 +9,13 @@ export type HeroProps = Record<string, never>;
 export function Hero() {
   return (
     <Box as="section" position="relative" minH="85vh" overflow="hidden" bg="clydeNavy">
-      {/* Background Image with Overlay */}
-      <Box position="absolute" inset={0} zIndex={0}>
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Professional furniture removal van in South Lanarkshire"
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQH/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIDBAUAESEGEhMxQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQEBAQEBAQAAAAAAAAAAAAABAgMAETH/2gAMAwEAAhEDEEA/ALVLqTL4+GPHxWIq9mOFOYJ0DqoAAG6nYfHznmtuprVueWzLI8s8zl5HY7lmJJJP3roaNSjZEFm2c+mP/9k="
-        />
-        <Box
-          position="absolute"
-          inset={0}
-          bgGradient="linear(to-b, blackAlpha.800, blackAlpha.700)"
-        />
-      </Box>
+      {/* Background Overlay - replace with actual image when available */}
+      <Box
+        position="absolute"
+        inset={0}
+        zIndex={0}
+        bgGradient="linear(to-b, blackAlpha.600, blackAlpha.800)"
+      />
 
       {/* Content */}
       <Flex

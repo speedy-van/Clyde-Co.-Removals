@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import { Box, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/react";
 import {
   Container,
@@ -124,13 +123,13 @@ export default function AboutPage() {
                 borderRadius="xl"
                 overflow="hidden"
                 h={{ base: "300px", md: "400px" }}
+                bg="gray.200"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
               >
-                <Image
-                  src="/images/about-team.jpg"
-                  alt="The Clyde & Co. Removals team"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
+                {/* Replace with actual team photo */}
+                <Text color="gray.500" fontSize="sm">Team Photo</Text>
               </Box>
             </MotionSection>
           </SimpleGrid>
