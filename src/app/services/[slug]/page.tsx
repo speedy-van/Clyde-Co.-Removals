@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Box,
   Heading,
@@ -68,62 +69,81 @@ export default async function ServicePage({ params }: ServicePageProps) {
       />
 
       {/* Hero Section */}
-      <Box bg="clydeNavy" py={{ base: 16, md: 24 }}>
-        <Container>
-          <MotionSection>
-            <Flex
-              direction={{ base: "column", md: "row" }}
-              align="center"
-              gap={{ base: 6, md: 12 }}
-            >
+      <Box position="relative" overflow="hidden">
+        {/* Background Image */}
+        <Box position="absolute" inset={0} zIndex={0}>
+          <Image
+            src={service.image}
+            alt={`${service.title} - Clyde & Co. Removals`}
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+          <Box
+            position="absolute"
+            inset={0}
+            bgGradient="linear(to-r, blackAlpha.800, blackAlpha.600)"
+          />
+        </Box>
+
+        <Box position="relative" zIndex={1} py={{ base: 16, md: 24 }}>
+          <Container>
+            <MotionSection>
               <Flex
-                w={{ base: 20, md: 24 }}
-                h={{ base: 20, md: 24 }}
-                bg="whiteAlpha.100"
-                borderRadius="xl"
+                direction={{ base: "column", md: "row" }}
                 align="center"
-                justify="center"
-                flexShrink={0}
+                gap={{ base: 6, md: 12 }}
               >
-                <IconDisplay
-                  name={service.icon}
-                  color="heatherGold"
-                  boxSize={{ base: 10, md: 12 }}
-                />
-              </Flex>
-              <Box textAlign={{ base: "center", md: "left" }}>
-                <Heading
-                  as="h1"
-                  fontFamily="var(--font-playfair)"
-                  fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-                  fontWeight="700"
-                  color="white"
-                  mb={4}
-                >
-                  {service.title}
-                </Heading>
-                <Text
-                  color="whiteAlpha.800"
-                  fontSize={{ base: "lg", md: "xl" }}
-                  maxW="2xl"
-                  mb={6}
-                >
-                  Professional {service.title.toLowerCase()} across South
-                  Lanarkshire. Fully insured with transparent, fixed-price
-                  quotes.
-                </Text>
                 <Flex
-                  gap={4}
-                  direction={{ base: "column", sm: "row" }}
-                  justify={{ base: "center", md: "flex-start" }}
+                  w={{ base: 20, md: 24 }}
+                  h={{ base: 20, md: 24 }}
+                  bg="whiteAlpha.200"
+                  borderRadius="xl"
+                  align="center"
+                  justify="center"
+                  flexShrink={0}
+                  backdropFilter="blur(8px)"
                 >
-                  <PhoneButton variant="primary" size="lg" />
-                  <WhatsAppButton variant="outline" size="lg" />
+                  <IconDisplay
+                    name={service.icon}
+                    color="heatherGold"
+                    boxSize={{ base: 10, md: 12 }}
+                  />
                 </Flex>
-              </Box>
-            </Flex>
-          </MotionSection>
-        </Container>
+                <Box textAlign={{ base: "center", md: "left" }}>
+                  <Heading
+                    as="h1"
+                    fontFamily="var(--font-playfair)"
+                    fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                    fontWeight="700"
+                    color="white"
+                    mb={4}
+                  >
+                    {service.title}
+                  </Heading>
+                  <Text
+                    color="whiteAlpha.800"
+                    fontSize={{ base: "lg", md: "xl" }}
+                    maxW="2xl"
+                    mb={6}
+                  >
+                    Professional {service.title.toLowerCase()} across South
+                    Lanarkshire. Fully insured with transparent, fixed-price
+                    quotes.
+                  </Text>
+                  <Flex
+                    gap={4}
+                    direction={{ base: "column", sm: "row" }}
+                    justify={{ base: "center", md: "flex-start" }}
+                  >
+                    <PhoneButton variant="primary" size="lg" />
+                    <WhatsAppButton variant="outline" size="lg" />
+                  </Flex>
+                </Box>
+              </Flex>
+            </MotionSection>
+          </Container>
+        </Box>
       </Box>
 
       {/* Trust Strip */}
