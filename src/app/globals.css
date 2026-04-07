@@ -1,13 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Brand Colors */
+  --clyde-navy: #0B2A4A;
+  --heather-gold: #E8A33D;
+  --neutral-light: #F7F5F0;
+  --neutral-dark: #1A1A1A;
+  --muted: #6B7280;
+  --success: #2F855A;
+  --white: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Font Variables (set by next/font) */
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 html,
@@ -17,11 +20,19 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--neutral-dark);
+  background: var(--neutral-light);
+  font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Account for sticky mobile bar */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 64px;
+  }
 }
 
 * {
@@ -35,8 +46,12 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair);
+}
+
+/* Accessible focus styles */
+:focus-visible {
+  outline: 2px solid var(--heather-gold);
+  outline-offset: 2px;
 }

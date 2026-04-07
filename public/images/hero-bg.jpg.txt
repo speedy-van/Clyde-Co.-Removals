@@ -1,0 +1,10 @@
+This is a placeholder for the hero background image.
+
+Replace with:
+- A professional photo of a removal van or team
+- Ideally showing South Lanarkshire scenery
+- Recommended size: 1920x1080 minimum
+- Format: JPG with compression for web
+- Next.js will handle optimization automatically
+
+File should be named: hero-bg.jpg
