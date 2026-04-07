@@ -196,17 +196,17 @@ export default function AboutPage() {
           <SimpleGrid columns={{ base: 1, lg: 2 }} gap={12} alignItems="center">
             <MotionSection>
               <Box
-                bg="neutralLight"
+                position="relative"
                 borderRadius="xl"
-                p={8}
+                overflow="hidden"
                 h={{ base: "300px", md: "400px" }}
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
               >
-                <Text color="muted" textAlign="center">
-                  [Van/equipment photo placeholder]
-                </Text>
+                <Image
+                  src="/images/about-van.jpg"
+                  alt="Clyde & Co. Removals van and equipment"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </Box>
             </MotionSection>
 
